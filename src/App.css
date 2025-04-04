@@ -1,38 +1,140 @@
-.App {
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1, h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul li {
+  font-size: 1.1rem;
+  padding: 5px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Profile Section */
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+  border: 5px solid #ddd;
+}
+
+video {
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #ddd;
+}
+
+/* Table Styles */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border: 2px solid #333;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #007BFF;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+.dark-mode h1, .dark-mode h2 {
+  color: #FFD700;
+}
+
+.dark-mode p, .dark-mode ul li {
+  color: #f4f4f4;
+}
+
+.dark-mode a {
+  color: #FFD700;
+}
+
+.dark-mode a:hover {
+  color: #ffffff;
+}
+
+.dark-mode button {
+  background-color: #333;
+  color: #FFD700;
+}
+
+.dark-mode button:hover {
+  background-color: #444;
+}
+
+/* Extra Styles for Containers */
+section {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.dark-mode section {
+  background-color: #444;
+  border: 1px solid #777;
 }

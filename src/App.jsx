@@ -11,13 +11,39 @@ function App() {
     setDarkMode(!darkMode);
   };
 
-  
   const handleLoginSuccess = () => {
     setIsLoggedIn(true); 
   };
 
   return (
-    
+    <Router>
+      <div className={darkMode ? 'dark-mode' : ''}>
+        <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
+        <Routes>
+          <Route 
+            path="/login" 
+            element={isLoggedIn ? <Navigate to="/home" /> : <Login onLoginSuccess={handleLoginSuccess} />} 
+          />
+          <Route 
+            path="/home" 
+            element={isLoggedIn ? (
+              <>
+                <Intro />
+                <Content />
+                <PersonalDetails />
+                <ContactSection />
+                <Links />
+                <Table />
+              </>
+            ) : (
+              <Navigate to="/login" />
+            )}
+          />
+          {/* Redirect to login if no route matches */}
+          <Route path="*" element={<Navigate to="/login" />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
